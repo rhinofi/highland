@@ -3,10 +3,11 @@
   "version": "3.0.0-beta.10",
   "description": "The high-level streams library",
   "main": "lib/index.js",
-  "types": "index.d.js",
+  "types": "index.d.ts",
   "files": [
     "dist",
-    "lib"
+    "lib",
+    "index.d.ts"
   ],
   "homepage": "https://caolan.github.io/highland/",
   "bugs": "https://github.com/caolan/highland/issues",
