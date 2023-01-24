@@ -701,6 +701,7 @@ declare namespace Highland {
          * @api public
          */
         errors(f: (err: Error, push: (err: Error | null, x?: R) => void) => void): Stream<R>;
+        errors<U>(f: (err: Error, push: (err: Error | null, x?: R | U) => void) => void): Stream<R | U>;
 
         /**
          * Creates a new Stream including only the values which pass a truth test.
