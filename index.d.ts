@@ -1678,6 +1678,7 @@ interface HighlandStatic {
     through<U, R>(f: (xs: Stream<R>) => U, xs: Stream<R>): U;
 
     filter<U, R>(f: (x: R | U) => x is U): (xs: Stream<R | U>) => Stream<U>;
+    filter<R>(f: (x: R) => boolean): (xs: Stream<R>) => Stream<R>;
 
     // through(thru: NodeJS.ReadWriteStream, xs: Stream<any>): Stream<any>;
     // through(thru: NodeJS.ReadWriteStream): (xs: Stream<any>) => Stream<any>;
