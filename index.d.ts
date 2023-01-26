@@ -1659,6 +1659,8 @@ interface HighlandStatic {
     take<R>(n: number): (xs: Stream<R>) => Stream<R>;
     throttle<R>(ms: number): (xs: Stream<R>) => Stream<R>;
 
+    flatten<R>(): Stream<Flattened<R>>;
+
     flatMap<R, U>(f: (x: R) => Stream<U>): (xs: Stream<R>) => Stream<U>;
     flatMap<R, U>(f: (x: R) => Stream<U>, xs: Stream<R>): Stream<U>;
 
@@ -1711,6 +1713,8 @@ interface HighlandStatic {
     concat<R, U>(ys: R[], xs: Stream<U>): Stream<R | U>;
 
     of<R>(x: R): Stream<R>;
+
+    parallel<U>(n: number): (xs: Stream<Stream<U>>)=> Stream<U>
 }
 
 
